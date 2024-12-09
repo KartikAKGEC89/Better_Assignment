@@ -1,0 +1,174 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%; 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box; 
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.error {
+  color: #d9534f;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.password-strength {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: center;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 16px;
+    gap: 12px;
+    width: 90%; 
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 14px;
+    gap: 12px;
+    width: 80%; 
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .success-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-container {
+    padding: 12px;
+    gap: 10px;
+    width: 60%; 
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .success-message {
+    font-size: 12px;
+  }
+}
+
+.password-strength {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.password-strength.weak {
+  color: red;
+}
+
+.password-strength.moderate {
+  color: rgb(255, 162, 0);
+}
+
+.password-strength.strong {
+  color: green;
+}
